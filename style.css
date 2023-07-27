@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+body {
+    background-color: #0e1012;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'League Spartan', sans-serif;
+    color: rgb(246, 222, 221);
+}
+
+input {
+    font-family: inherit;
+}
+
+h1 {
+    font-size: calc(2.5vw + 30px);
+}
+
+input {
+    color: #e34141;
+    border: 2px solid #821515;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    font-size: 20px;
+    width: 600px;
+    max-width: 80vw;
+    outline: none;
+}
+
+input:focus,
+input:active {
+    box-shadow: 2px 2px 15px #821515;
+}
+
+input::placeholder {
+    color: rgb(246, 222, 221);
+}
+
+
+label {
+    position: relative;
+    background-color: #08090a;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+label:active {
+    color: transparent;
+}
+
+label:active:after {
+    content: "";
+    position: absolute;
+    color: rgb(246, 222, 221);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    background-color: rgba(130, 21, 21, 0.2);
+    border: 1px dashed #821515;
+}
+
+label:active:before {
+    content: "Copied!";
+    position: absolute;
+    color: rgb(246, 222, 221);
+    top: calc(50% - 14px);
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
