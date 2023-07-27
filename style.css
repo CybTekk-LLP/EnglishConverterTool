@@ -44,7 +44,9 @@ input {
     border: 2px solid #821515;
     border-radius: 10px;
     padding: 10px 25px;
-    background: transparent;
+    background: rgba(14, 16, 18, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     font-family: inherit;
     font-size: 20px;
     width: 600px;
@@ -67,6 +69,7 @@ label {
     background-color: #08090a;
     padding: 30px;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 label:active {
@@ -113,10 +116,6 @@ label:active:before {
     left: 0;
     z-index: -1;
     background-color: rgba(8, 9, 10, .4);
-}
-
-label {
-    cursor: pointer;
 }
 
 h1,
