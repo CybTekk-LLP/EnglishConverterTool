@@ -6,21 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hash Everything To English</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./js/libraries/three.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script
+        src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/v0.1.14/dist/aframe-orbit-controls-component.min.js"></script>
+
 </head>
 
-<body>
+<body translate="no">
     <br>
     <img src="./img/Cybtekk.svg" alt="Cybtekk Logo" height="80px" width="200px">
     <br>
     <br>
-    <h1>Convert Anything to English</h1>
+    <h1>Force Convert Anything to English</h1>
     <br>
     <input id="hash" type="text" placeholder="Enter a text or sentence in any language...">
     <br>
     <br>
     <br>
     <label for="hash">Forced English 🇬🇧 here</label>
+    <div id="smoke"></div>
+    <div class="smokescreen"></div>
+    <a-scene vr-mode-ui="enabled: false">
+        <a-assets>
+            <a-asset-item id="orb" src="./model/adventure_time_finns_demon_blood_sword.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="camera" camera="fov: 80; zoom: 1;" position="0 2 5" orbit-controls="
+                autoRotate: true;
+                target: #target;
+                enableDamping: true;
+                dampingFactor: 1;
+                minDistance:3;
+                maxDistance:100;
+                " mouse-cursor="">
+            <a-entity geometry="primitive:cone; radius-bottom:1; radius-top:0" scale=".33 1 .33" position="0 0 0"
+                rotation="90 0 0" material="color: #0099ff; transparent: true; opacity:0.5"></a-entity>
+        </a-entity>
+
+
+        <a-entity position="0 0 0" id="target">
+            <a-entity gltf-model="#orb" animation-mixer scale="0.07 0.07 0.07" position="0 -4 0"></a-entity>
+        </a-entity>
+    </a-scene>
+
 </body>
-<script src="script.js"></script>
+
+
+
+<script src="./js/script.js"></script>
+<script src="./js/smoke.js"></script>
 
 </html>
