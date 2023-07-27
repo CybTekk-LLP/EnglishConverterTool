@@ -50,6 +50,13 @@ label {
     background-color: #08090a;
     padding: 30px;
     border-radius: 30px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 label:active {
